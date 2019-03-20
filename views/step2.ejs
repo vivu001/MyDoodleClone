@@ -1,0 +1,36 @@
+<%- include("./partials/header") -%>
+
+<br>
+<br>
+<h1 class="black">Willkommen <h1 class="red">DoodleClone </h1></h1><br>
+<hr>
+<fieldset align="center" style="width:800px">
+    <legend align="center" style="width:300px"><h2 class="center">Step 2</h2></legend>
+
+    <h3>Wählen Sie Anfangstermin und Endtermin</h3>
+
+    <label for="date"> Datum </label>
+    <input id="date" name="date" type="date">
+    <label for="time"> Von</label>
+    <input id="time" name="time" type="time">
+    <label for="time2"> Bis</label>
+    <input id="time2" name="time2" type="time">
+    <br>
+    <button onclick="<%" ADD() "%>">ADD</button>
+    <button onclick="Remove()">Remove</button>
+    <h3>Eingegebene Termine sind: </h3>
+    <div id="showdatum"></div>
+    <br>
+    <p id="test"></p>            <!-- test die Anzahl der angegebenen Terminen -->
+</fieldset>
+<form action="/step2" method="post">
+    <button type="submit">Weiter</button>
+</form>
+<form action="/step1" method="get">
+    <button type="submit">Zurück</button>
+</form>
+<form action="/" method="get">
+    <button type="submit">Startseite</button>
+</form>
+
+<%- include("./partials/footer") -%>

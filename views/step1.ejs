@@ -1,0 +1,36 @@
+<%- include("./partials/header") -%>
+<br>
+<br>
+<h1 class="black">Willkommen <h1 class="red">DoodleClone </h1></h1><br>
+<hr>
+<form action="/step1" method="post">
+    <fieldset align="center" style="width:800px">
+        <legend align="center" style="width:300px"><h2 class="center">Step 1</h1></legend>
+        <p style="font-size:20px;">Geben Sie folgende Informationen bitte ein </p>
+
+        <label for="Name" class="gray">Name/Email: </label>
+        <input type="text" id="Name" name="Name" required autofocus placeholder="Ihr Name/Email"/>
+        <br>
+        <label for="Wo" id="Wo" class="gray"> Wo findet die Konferenz statt: </label>
+        <br>
+        <select name="Wo" required>
+            <option value=""></option>
+            <br>
+            <option value="Telefone conferenz" class="green">Telefone conferenz</option>
+            <br>
+            <option value="Meeting conferenz" class="blue">Meeting conferenz</option>
+            <br>
+            <option value="weitere Optionen" class="gray">weitere Optionen</option>
+        </select>
+        <br>
+        <label for="kommentar" class="gray">Weiter Kommentar </label><br>
+        <textarea id="kommentar" name="kommentar" rows="4" cols="50"></textarea>
+        <br>
+        <br>
+        <!--<button onclick="Step1()">Weiter</button>-->
+        <button type="text" name="weiter" type="submit">Weiter</button>
+        <button onclick="window.location.href='/'">Startseite</button>
+    </fieldset>
+</form>
+
+<%- include("./partials/footer") -%>

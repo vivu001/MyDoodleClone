@@ -1,0 +1,43 @@
+<%- include("./partials/header") -%>
+<br>
+<br>
+<h1 class="black">Willkommen <h1 class="red">DoodleClone </h1></h1>
+<br>
+<hr>
+<form action="/step3" method="post">
+    <fieldset align="center" style="width:800px">
+        <legend align="center" style="width:300px"><h2 class="center">Step 3</h2></legend>
+        <h3>Wählen Sie die Eigenschaften für Umfragen</h3><br>
+        <p id="text1" style="display:block"><input type="checkbox" onclick="myFunction1()" id="janein"
+                                                   name="Waehl1" checked> Ja/Nein/Vielleicht </p>
+        <p id="text2" style="display:block"><input type="checkbox" onclick="myFunction2()" id="teil"
+                                                   name="Waehl2"> Nur angegebene Teilnehmer</p>
+        <p id="text5" style="display:none">Geben Sie die Anzahl der Teilnehmer ein<input id="Anzahl"
+                                                                                         name="Anzahteilnehmer"></p>
+        <p id="text3" style="display:block"><input type="checkbox" onclick="myFunction3()" id="einwahl" name="Waehl3">
+            Nur ein Wahl pro Teilnehmer</p>
+        <p id="text4" style="display:block"><input type="checkbox" onclick="myFunction4()" id="hide" name="Waehl4">
+            Teilnehmer unsichtbar zeigen</p> <br>
+
+        <br>
+        <h3>Option</h3>
+        <label for="dateline"> Deadline eingeben</label>
+        <input id="dateline" name="deadline" type="date">
+        <label for="timeline"> Bis</label>
+        <input id="timeline" name="timeline" type="time">
+        <br>
+        <br>
+        <label for="Kontakt"> Bitte geben Ihre Emailadresse, die Terminoutlook wird demnächst an Ihre Email
+            verschicken </label>
+        <input type="text" id="Kontakt" name="kontakt">
+        <br>
+        <label for="KontaktTel"> Bitte geben Ihre Tel., es wird erleicht, Ihnen über Tel. zu erreichen </label>
+        <input type="text" id="Tel" name="tel">
+        <br><br><br><br>
+        <input type="hidden" id="hash_" name="h_">
+        <input type="submit" value="Verschicken" onclick="Fertig()">
+    </fieldset>
+</form>
+<p id="demo"></p>
+
+<%- include("./partials/footer") -%>

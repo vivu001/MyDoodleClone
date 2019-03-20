@@ -1,0 +1,110 @@
+<%- include("./partials/header") -%>
+<br>
+<br>
+<h1 class="black">Willkommen <h1 class="red">DoodleClone </h1></h1>
+<br>
+<hr>
+
+<fieldset align="center" style="width:800px">
+    <legend align="center" style="width:300px"><h2 class="center">Step 4</h2></legend>
+
+    <p align="right">Loggen Sie ein</p>
+    <form name="test">
+        <input type="button" id="login" value="login" name="b1" onclick="disable_enable('login');" type="button"
+               style="float: right" style="font-size:20px;" class="blue">
+        <input type="button" id="logout" value="logout" name="b2" onclick="disable_enable('logout');" type="button"
+               style="float: right" style="font-size:20px;" class="blue">
+    </form>
+    <br><br>
+    <h3>Teilen Sie an Teilnehmer Ihre Umfragen-Link mit </h3>
+
+    <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+        E-mail:<br>
+        <textarea id="url1" rows="1" cols="50"></textarea><br>
+        Ihr Link :<br>
+        <textarea id="url2" rows="5" cols="50"></textarea><br>
+        <input type="submit" value="Send"/>
+
+    </form>
+
+    <fieldset style="display:none">
+        <p id="text1" style="display:none"><input type="checkbox" onclick="myFunction1()" id="janein"
+                                                  name="Waehl1"</input>
+            Ja/Nein/Vielleicht</p>
+        <p id="text2" style="display:none"><input type="checkbox" onclick="myFunction2()" id="teil"
+                                                  name="Waehl2"</input>
+            Nur angegebene Teilnehmer</p>
+        <p id="text5" style="display:none">Geben Sie die Anzahl der Teilnehmer ein<input id="Anzahl"
+                                                                                         name="Anzahteilnehmer"</input>
+        </p>
+        <p id="text3" style="display:none"><input type="checkbox" onclick="myFunction3()" id="einwahl"
+                                                  name="Waehl3" </input>
+            Nur ein Wahl pro Teilnehmer</p>
+        <p id="text4" style="display:none"><input type="checkbox" onclick="myFunction4()" id="hide"
+                                                  name="Waehl4" </input>
+            Teilnehmer unsichtbar zeigen</p> <br>
+
+    </fieldset>
+
+    <br>
+    <h2 style="display:none">Option</h2>
+    <label for="deadline" style="display:none"> Deadline eingeben</label>
+    <input id="deadline" type="date" style="display:none">
+    <label for="timeline" style="display:none"> Bis</label>
+    <input id="timeline" type="time" style="display:none">
+    <br>
+    <br>
+    <label for="Kontakt" style="display:none"> Bitte geben Ihre Emailadresse, die Terminoutlook wird demnächst an Ihre
+        Email verschicken </label>
+    <input type="text" id="Kontakt" name="Kontakt" style="display:none">
+    <br>
+    <label for="KontaktTel" style="display:none"> Bitte geben Ihre Tel., es wird erleicht, Ihnen über Tel. zu
+        erreichen </label>
+    <input type="text" id="Tel" name="Tel" style="display:none">
+    <br>
+    <h3>Geben Sie Ihre eigene Wahl ein</h3>
+
+    <p id="txt1">Klicken Sie auf "Add Teilnehmer" um neue Teilnehmerreihen zu erstellen </p>
+    <p id="txt2">Sie können Ihre Umfragenreihe löschen beim Klick auf "Delete" Zell </p>
+    <p id="txt3">Sie können Ihre Name verändern</p>
+    <p>Wenn Deadline erreicht ist oder Termin abgestimmt wurde , Umfragentablle wird nur Ergebnis zeigen </p>    <br>
+    </div>
+    <br>
+
+    <table border width=30% height=50 align="center" id="myTable" border="1" style="cursor: pointer;">
+
+    </table>
+
+    <br>
+    <br>
+
+    <table id="myVote" border="1">
+    </table>
+    <br>
+    <span id="sumV"></span><br>
+
+
+    <button id="Addrow" onclick="insertrows2()">Add Teilnehmer</button>
+    <input type="button" id="vote" onclick="vote()" value="vote" style="display:none">
+    <br>
+
+    <br>
+    <form action="/step3_b" method=GET style="display:none">
+        <input type="hidden" id="hash_" name="h_">
+
+        <input type="submit" value="Verschicken" onclick="Fertig()">
+
+    </form>
+    <p>Klicken Sie auf "Save" um Ihre Wahl zu speichern</p>
+
+    <button id="Save" onclick="Save()">Save</button>
+    <button id="Startseite" onclick="Reset()" style="display:none">Erstellen Sie neue Umfrage</button>
+    <p class="rednote">Bitte denken Sie dran, Ihr Link zu speichern !!</p>
+</fieldset>
+<p id="demo"></p>
+<br>
+<script type="text/javascript" src="../script.js"></script>
+<script> window.document.onload = getCookie(); </script>
+<script> window.document.onload = getCookie2(); </script>
+
+<%- include("./partials/footer") -%>

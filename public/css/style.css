@@ -1,0 +1,65 @@
+img {
+    width: 15%;
+    height: auto;
+    opacity: 0.5;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
+
+h2 {
+    background-color: white;
+}
+
+body {
+    background-color: lightblue;
+}
+
+fieldset {
+    background-color: white;
+}
+
+.center {
+    text-align: center;
+    border: 3px solid lightgray;
+    width: 40%;
+}
+
+.red {
+    text-align: center;
+    color: red;
+}
+
+.black {
+    text-align: center;
+    color: black;
+}
+
+.blue {
+    color: blue;
+}
+
+.gray {
+    color: gray;
+}
+
+.green {
+    color: green;
+}
+
+/*step 3*/
+td:hover {
+    background-color: #ddd;;
+    cursor: pointer
+}
+
+.selected {
+    background-color: red;
+    color: #fff;
+    font-weight: bold
+}
+
+.rednote {
+    color: red;
+}
